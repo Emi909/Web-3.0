@@ -87,7 +87,6 @@ video {
     /* font: inherit; */
     vertical-align: baseline;
     box-sizing: border-box;
-    color: black;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -168,21 +167,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 12%;
 }
+
+.menu ul li a {
+    color: transparent; /*because mobile version*/
+}
+
 .logo {
     height: 1.75rem;
     width: auto;
 }
 
 .logoMenu {
-    width: 10%;
+    width: 2.5rem;
     display: flex;
-    justify-content: space-between;
+    align-content: center;
     flex-direction: column;
 
     & hr {
-        width: 100%;
+        width: 2.5rem;
         border: 3px solid #000000;
+        margin-bottom: 1rem;
     }
 }
 
@@ -211,10 +217,11 @@ body {
 
 .mainArticle img {
     width: 100%;
-    height: auto;
+    height: 18.75rem;
     object-fit: cover;
     grid-column: auto;
     grid-row: auto;
+    object-fit: cover;
 }
 
 h1 {
@@ -242,6 +249,7 @@ button {
     color: #FFFDFA;
     width: 11.563rem;
     height: 3rem;
+    border: #F15D51;
 }
 
 /* why does the width not inherited from parent? */
@@ -305,19 +313,52 @@ button {
     flex-wrap: wrap;
     background-color: white;
     width: 91.4%;
+    row-gap: 1.5rem;
+    column-gap: 1rem;
 }
 
-.smallContainer {
+/* .smallContainers {
     display: grid;
     /* flex-direction: row;
     flex-wrap: wrap; */
 
-    grid-template-columns: 6.25rem auto;
+    /* grid-template-columns: 6.25rem auto;
     grid-template-rows: auto auto auto;
     gap: 1.5rem;
     max-width: 100%;
     height: 8.063rem;
-}
+} */ 
+
+/* .smallContainers {
+    display: grid;
+    column-gap: 1.563rem;
+    row-gap: auto;
+    
+
+    & img {
+        width: auto;
+        height: 100%;
+        margin-right: 1.5rem;
+        max-height: 8.063rem;
+        object-fit: cover;
+        grid-column: 1 / 2;
+        grid-row: 1/4;
+    }
+    & .number {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #C5C6CE;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    & h4 {
+        font-weight: bolder;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+} */
 
 .smallContainer1 {
     display: grid;
@@ -327,7 +368,6 @@ button {
     & img {
         width: auto;
         height: 100%;
-        margin-right: 1.5rem;
         max-height: 8.063rem;
         object-fit: cover;
         grid-column: 1 / 2;
@@ -357,7 +397,35 @@ button {
     & img {
         width: auto;
         height: 100%;
-        margin-right: 1.5rem;
+        max-height: 8.063rem;
+        object-fit: cover;
+        grid-column: 1 / 2;
+        grid-row: 1/4;
+    }
+    & .number {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #C5C6CE;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    & h4 {
+        font-weight: bolder;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+} 
+
+.smallContainer3 {
+    display: grid;
+    column-gap: 1.563rem;
+    row-gap: auto;
+
+    & img {
+        width: auto;
+        height: 100%;
         max-height: 8.063rem;
         object-fit: cover;
         grid-column: 1 / 2;
@@ -380,5 +448,16 @@ button {
 }
 
 
+
 /* all the styles before that query will be applied until we reach to 800px and still after unless overriden in this*/
-@media screen and (min-width: 800px) {}
+@media screen and (min-width: 800px) {
+
+    .menu ul li a {
+        color: black;
+    }
+
+    .logoMenu ul li a {
+        color: transparent;
+}
+
+}
